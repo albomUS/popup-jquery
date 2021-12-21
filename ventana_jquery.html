@@ -1,0 +1,83 @@
+<html>
+<title>Ejemplo de popup</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script language="javascript">
+    $( document ).ready( function() {
+        $("a[rel='pop-up']").click(function () {
+              var caracteristicas = "height=700,width=800,scrollTo,resizable=1,scrollbars=1,location=0";
+              nueva=window.open(this.href, 'Popup', caracteristicas);
+              return false;
+     });
+    });
+    </script>
+
+<body>
+   
+<div>
+<a href="ventana.html" rel="pop-up">Abrir ventana sin efectos</a>
+</div>    
+<br>
+
+    <div data-role="main" class="ui-content">
+      <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Abrir ventana con efecto</a>
+      
+
+      <div data-role="popup" id="myPopup" class="ui-btn"  data-transition="flip" data-arrow="l">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <p>Ejemplo de ventana emergente.</p>
+        <p><b>Consejo:</b> Tu puedes cerrar esta ventana.</p>
+      </div>
+    </div>
+
+     
+</div>
+  
+<br>
+
+<a href="#myPopupDialog" data-rel="popup" class="ui-btn">Abrir ventana con dialogos emergentes</a>
+
+<div data-role="popup" id="myPopupDialog">
+  <div data-role="header"><h1>Ventana</h1></div>
+  <div data-role="main" class="ui-content"><p>Algun texto</p><a href="#">algun enlace...</a>
+    
+  <div data-role="footer"><h1>Pie de la ventana</h1></div>
+</div>
+</div>
+
+<br>
+<div>
+<p>Haz clic en los botones para demostración</p>
+    <a href="#myPop1" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#demo">Derecha</a>
+    <a href="#myPop2" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#demo">Arriba</a>
+    <a href="#myPop3" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#demo">Izquierda</a>
+    <a href="#myPop4" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#demo">Abajo</a>
+    
+    <div data-role="popup" id="myPop1" class="ui-content" data-arrow="l">
+      <p>Se situa a la derecha.</p>
+    </div>
+    <div data-role="popup" id="myPop2" class="ui-content" data-arrow="t">
+      <p>Se situa  abajo.</p>
+    </div>
+    <div data-role="popup" id="myPop3" class="ui-content" data-arrow="r">
+      <p>Se situa a la izquierda.</p>
+    </div>
+    <div data-role="popup" id="myPop4" class="ui-content" data-arrow="b">
+      <p>Se situaa hacia arriba.</p>
+    </div>
+
+    <p>Ejemplo de colocación de ventana con flecha pulsando:<span id="demo" style="color:red;">aquí</span>.</p>
+</div>
+    
+
+
+
+
+
+</head>
+</body>
+
+
